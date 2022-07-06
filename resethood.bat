@@ -3,7 +3,8 @@
 cls
 for /f "tokens=2* skip=2" %%a in ('reg query "HKLM\SOFTWARE\WOW6432Node\EA GAMES\The Sims 2" /v "DisplayName"') do set savefile=%%b
 for /f "tokens=2* skip=2" %%c in ('reg query "HKLM\SOFTWARE\WOW6432Node\EA GAMES\The Sims 2" /v "Folder"') do set installdir=%%d
-echo The Sims 2 Neighborhood Reset Utility
+set batname=The Sims 2 Neighborhood Reset Utility
+echo %batname%
 echo.
 echo This utility can be used to reset a chosen neighborhood in the Sims 2 Ultimate Collection. Please note that this process will PERMANENTLY reset the neighborhood and is irreversible, so choose carefully.
 echo =============
@@ -27,7 +28,7 @@ if "%op%"=="7" goto op7
 if "%op%"=="0" goto exit
 :op1
 cls
-echo The Sims 2 Neighborhood Reset Utility
+echo %batname%
 echo =============
 rmdir /s /q "%userprofile%\Documents\EA Games\%savefile%\Neighborhoods\N001" >nul 2>&1
 robocopy /s "%installdir%\Double Deluxe\Base\TSData\Res\UserData\Neighborhoods\N001" "%userprofile%\Documents\EA Games\%savefile%\Neighborhoods\N001" >nul 2>&1
@@ -37,7 +38,7 @@ pause
 goto begin
 :op2
 cls
-echo The Sims 2 Neighborhood Reset Utility
+echo %batname%
 echo =============
 rmdir /s /q "%userprofile%\Documents\EA Games\%savefile%\Neighborhoods\N002" >nul 2>&1
 robocopy /s "%installdir%\Double Deluxe\Base\TSData\Res\UserData\Neighborhoods\N002" "%userprofile%\Documents\EA Games\%savefile%\Neighborhoods\N002" >nul 2>&1
@@ -47,7 +48,7 @@ pause
 goto begin
 :op3
 cls
-echo The Sims 2 Neighborhood Reset Utility
+echo %batname%
 echo =============
 rmdir /s /q "%userprofile%\Documents\EA Games\%savefile%\Neighborhoods\N003" >nul 2>&1
 robocopy /s "%installdir%\Double Deluxe\Base\TSData\Res\UserData\Neighborhoods\N003" "%userprofile%\Documents\EA Games\%savefile%\Neighborhoods\N003" >nul 2>&1
@@ -57,7 +58,7 @@ pause
 goto begin
 :op4
 cls
-echo The Sims 2 Neighborhood Reset Utility
+echo %batname%
 echo =============
 rmdir /s /q "%userprofile%\Documents\EA Games\%savefile%\Neighborhoods\G001" >nul 2>&1
 robocopy /s "%installdir%\Seasons\TSData\Res\UserData\Neighborhoods\G001" "%userprofile%\Documents\EA Games\%savefile%\Neighborhoods\G001" >nul 2>&1
@@ -67,7 +68,7 @@ pause
 goto begin
 :op5
 cls
-echo The Sims 2 Neighborhood Reset Utility
+echo %batname%
 echo =============
 rmdir /s /q "%userprofile%\Documents\EA Games\%savefile%\Neighborhoods\F001" >nul 2>&1
 robocopy /s "%installdir%\Free Time\TSData\Res\UserData\Neighborhoods\F001" "%userprofile%\Documents\EA Games\%savefile%\Neighborhoods\F001" >nul 2>&1
@@ -77,7 +78,7 @@ pause
 goto begin
 :op6
 cls
-echo The Sims 2 Neighborhood Reset Utility
+echo %batname%
 echo =============
 rmdir /s /q "%userprofile%\Documents\EA Games\%savefile%\Neighborhoods\E001" >nul 2>&1
 robocopy /s "%installdir%\Apartment Life\TSData\Res\UserData\Neighborhoods\E001" "%userprofile%\Documents\EA Games\%savefile%\Neighborhoods\E001" >nul 2>&1
@@ -87,7 +88,7 @@ pause
 goto begin
 :op7
 cls
-echo The Sims 2 Neighborhood Reset Utility
+echo %batname%
 echo =============
 rmdir /s /q "%userprofile%\Documents\EA Games\%savefile%\Neighborhoods\Tutorial" >nul 2>&1
 robocopy /s "%installdir%\Double Deluxe\Base\TSData\Res\UserData\Neighborhoods\Tutorial" "%userprofile%\Documents\EA Games\%savefile%\Neighborhoods\Tutorial" >nul 2>&1
@@ -97,7 +98,7 @@ pause
 goto begin
 :exit
 cls
-echo The Sims 2 Neighborhood Reset Utility
+echo %batname%
 echo =============
 echo The utility will now exit.
 echo =============
