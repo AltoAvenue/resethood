@@ -6,7 +6,7 @@ for /f "tokens=2* skip=2" %%c in ('reg query "HKLM\SOFTWARE\WOW6432Node\EA GAMES
 set batname=The Sims 2 Neighborhood Reset Utility
 echo %batname%
 echo.
-echo This utility can be used to reset a chosen neighborhood in the Sims 2 Ultimate Collection. Please note that this process will PERMANENTLY reset the neighborhood and is irreversible, so choose carefully.
+echo This utility can be used to reset a chosen neighborhood in %savefile%. Please note that this process will PERMANENTLY reset the neighborhood and is irreversible, so choose carefully.
 echo =============
 echo 1. Pleasantview
 echo 2. Strangetown
