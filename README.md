@@ -1,7 +1,7 @@
 # The Sims 2 Neighborhood Reset Utility
 
 **Main menu:**
-[Main Menu](https://github.com/AltoAvenue/resethood/blob/main/menu.png?raw=true)
+![Main Menu](https://github.com/AltoAvenue/resethood/blob/main/menu.png?raw=true)
 
 I was disappointed there is no utility to easily to reset neighborhoods for the Windows version of the Sims 2 Ultimate Collection similar to the one present in Super Collection for Mac, so I decided to create a simple one myself in batch.
 
